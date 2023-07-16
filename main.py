@@ -5,21 +5,39 @@
 # которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной.
 # Выведите минимальное количество монет, которые нужно перевернуть
 
-from random import randint
+# from random import randint
 
-monet = int(input('Введите количество монет: '))
-temp = 0
-count_resh = 0
-count_orel = 0
-for _ in range(monet):
-    temp = randint(0, 1)
-    print(temp, end=' ')
-    if temp > 0:
-        count_resh += 1
-    else:
-        count_orel += 1
-print()
-if count_resh > count_orel:
-    print(f'Переверните орлы - {count_orel} раз')
-else:
-    print(f'Переверните решки - {count_resh} раз')
+# monet = int(input('Введите количество монет: '))
+# temp = 0
+# count_resh = 0
+# count_orel = 0
+# for _ in range(monet):
+#     temp = randint(0, 1)
+#     print(temp, end=' ')
+#     if temp > 0:
+#         count_resh += 1
+#     else:
+#         count_orel += 1
+# print()
+# if count_resh > count_orel:
+#     print(f'Переверните орлы - {count_orel} раз')
+# else:
+#     print(f'Переверните решки - {count_resh} раз')
+
+# Задача 12:
+
+# Петя и Катя – брат и сестра.
+# Петя – студент, а Катя – школьница.
+# Петя помогает Кате по математике.
+# Он задумывает два натуральных числа X и Y (X,Y≤1000),
+# а Катя должна их отгадать. 
+# Для этого Петя делает две подсказки. 
+# Он называет сумму этих чисел S и их произведение P. 
+# Помогите Кате отгадать задуманные Петей числа.
+
+import math
+summa = int(input('Введите сумму: '))
+proizv = int(input('Введите произведение: '))
+x = 0.5*(summa - math.sqrt(summa*summa - 4*proizv))
+y = summa - x
+print(f'Певое число - {math.floor(x)}, Второе число - {math.floor(y)}')
