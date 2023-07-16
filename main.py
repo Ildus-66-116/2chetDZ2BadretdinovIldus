@@ -35,9 +35,23 @@
 # Он называет сумму этих чисел S и их произведение P. 
 # Помогите Кате отгадать задуманные Петей числа.
 
-import math
-summa = int(input('Введите сумму: '))
-proizv = int(input('Введите произведение: '))
-x = 0.5*(summa - math.sqrt(summa*summa - 4*proizv))
-y = summa - x
-print(f'Певое число - {math.floor(x)}, Второе число - {math.floor(y)}')
+# import math
+# summa = int(input('Введите сумму: '))
+# proizv = int(input('Введите произведение: '))
+# x = 0.5*(summa - math.sqrt(summa*summa - 4*proizv))
+# y = summa - x
+# print(f'Певое число - {math.floor(x)}, Второе число - {math.floor(y)}')
+
+
+# Задача 14: 
+
+# Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+n = int(input('Введите чило: '))
+i = 1
+while i < n:
+    if i % 2 == 0:
+        print(i, end=' ')
+    i += 1
+
+
